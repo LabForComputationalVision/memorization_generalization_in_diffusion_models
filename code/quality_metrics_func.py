@@ -257,14 +257,3 @@ def remove_repeats(dataset, threshold=.95):
     return data_cleaned
 
 
-def remove_repeats_loop(dataset, threshold=.95): 
-
-    dataset_no_repeats = [dataset[0:1]]
-    for i in range(1,len(dataset)): 
-        corrs = im_set_corr(remove_im_mean(dataset[i:i+1]), remove_im_mean(torch.vstack(dataset_no_repeats)))
-        rep_IDs_1 , rep_IDs_2 = torch.where(abs(corrs )>threshold)
-        if len(rep_IDs_2)==0: 
-            dataset_no_repeats.append(dataset[i:i+1])
-        else: 
-            pass
-    return torch.vstack(dataset_no_repeats)
