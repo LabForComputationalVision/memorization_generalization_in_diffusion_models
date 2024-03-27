@@ -132,10 +132,12 @@ def load_UNet(base_path, training_data_name, training_noise,RF=None, set_size=No
     @swap: True is the network was trained on the second half of the dataset
     @my_args: paramters of the network, such as RF, if different from the standard initialization 
     '''
-    
-    parser = argparse.ArgumentParser(description='')
-    parser.add_argument('--RF', default = RF)
-    my_args = parser.parse_args('')
+    if my_args is None: 
+        parser = argparse.ArgumentParser(description='')
+        parser.add_argument('--RF', default = RF)
+        my_args = parser.parse_args('')
+    else: 
+        my_args.RF = RF
         
     init = init_UNet( my_args=my_args)
     
