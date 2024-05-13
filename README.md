@@ -15,6 +15,7 @@ Within each architecure directory, there are multiple folders containing variant
 ### 2. Code
 The <var>code</var> directory contains the python code for 
 - *training* a universal blind denoiser used in a diffusion framework:
+  * run celebA_to_torch.py to preprocess images before training 
   * run main.py which calls the trainer.py to train a denoiser. 
 - *sampling* algorithm to sample from the prior embedded in the denoiser:
   * see the notebooks
