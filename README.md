@@ -14,8 +14,10 @@ Within each architecure directory, there are multiple folders containing variant
 
 ### 2. Code
 The <var>code</var> directory contains the python code for 
-- training a universal blind denoiser used in a diffusion framework
-- sampling algorithm to sample from the prior embedded in the denoiser
+- *training* a universal blind denoiser used in a diffusion framework:
+  * run main.py which calls the trainer.py to train a denoiser. 
+- *sampling* algorithm to sample from the prior embedded in the denoiser:
+  * see the notebooks
 - and all the required helper functions such as
   * code for generating synthetic $C^{\alpha}$ and Disc images
   * code to compute the eigen basis of the denoiser operation
