@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch
 
 ################################################# network class #################################################
- class UNet(nn.Module): 
+class UNet(nn.Module): 
     def __init__(self, args): 
         super(UNet,self).__init__()
         
